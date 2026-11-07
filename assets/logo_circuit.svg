@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="c-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#7C6CFF" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#FF3366" stop-opacity="0.6" />
+    </linearGradient>
+    <linearGradient id="c-text" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="70%" stop-color="#F1F5F9" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+    <radialGradient id="c-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00C8FF" stop-opacity="0.18" />
+      <stop offset="60%" stop-color="#7C6CFF" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="transparent" />
+    </radialGradient>
+    <!-- Soft Glow Filter -->
+    <filter id="node-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Dark Obsidian Squircle Base -->
+  <rect x="3" y="3" width="58" height="58" rx="14" 
+        fill="#080C16" 
+        stroke="url(#c-border)" 
+        stroke-width="1.4" />
+
+  <!-- Core Ambient Glow -->
+  <circle cx="32" cy="32" r="20" fill="url(#c-glow)" />
+
+  <!-- Circuit Traces matching og-image.jpg aesthetics -->
+  <!-- Top-Left Circuit Branch (Cyan) -->
+  <path d="M 7 15 L 18 15 L 25 22 L 25 25" 
+        stroke="#00E5FF" stroke-width="1.4" stroke-linecap="round" opacity="0.75" />
+  <circle cx="7" cy="15" r="1.8" fill="#00E5FF" filter="url(#node-glow)" />
+  <circle cx="25" cy="25" r="1.4" fill="#00E5FF" />
+
+  <!-- Top-Right Sub-trace (Soft Violet) -->
+  <path d="M 46 8 L 46 14 L 54 22" 
+        stroke="#7C6CFF" stroke-width="1.2" stroke-linecap="round" opacity="0.55" />
+  <circle cx="46" cy="8" r="1.5" fill="#7C6CFF" />
+  <circle cx="54" cy="22" r="1.5" fill="#7C6CFF" />
+
+  <!-- Bottom-Right Circuit Branch (Ruby Crimson) -->
+  <path d="M 57 49 L 46 49 L 39 42 L 39 39" 
+        stroke="#FF3366" stroke-width="1.4" stroke-linecap="round" opacity="0.75" />
+  <circle cx="57" cy="49" r="1.8" fill="#FF3366" filter="url(#node-glow)" />
+  <circle cx="39" cy="39" r="1.4" fill="#FF3366" />
+
+  <!-- Bottom-Left Sub-trace (Cyan/Teal) -->
+  <path d="M 18 56 L 18 50 L 10 42" 
+        stroke="#00E5FF" stroke-width="1.2" stroke-linecap="round" opacity="0.45" />
+  <circle cx="18" cy="56" r="1.5" fill="#00E5FF" />
+
+  <!-- Central Authority Monogram: 'MFC' in refined serif matching og-image.jpg -->
+  <text x="32" y="39.5" 
+        font-family="'Playfair Display', 'Cormorant Garamond', 'Georgia', serif" 
+        font-size="20.5" 
+        font-weight="700" 
+        letter-spacing="1.2" 
+        fill="url(#c-text)" 
+        text-anchor="middle">MFC</text>
+
+  <!-- Delicate Precision Under-accent -->
+  <line x1="22" y1="44" x2="42" y2="44" stroke="url(#c-border)" stroke-width="1" stroke-linecap="round" />
+  <circle cx="32" cy="44" r="1.2" fill="#00E5FF" />
+</svg>

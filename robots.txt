@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /cozumler/
+Sitemap: https://m-fatih-c.github.io/cozumler/sitemap.xml
